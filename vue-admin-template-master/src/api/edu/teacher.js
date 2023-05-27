@@ -26,10 +26,7 @@ export default {
 
     },
 
-
-
     // 这里传递一个对象 我为什么要在url后面加teacher？？？
-
     addTeacher(teacher) {
         return request({
             url: `/eduservice/teacher/addTeacher`,

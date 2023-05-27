@@ -122,15 +122,13 @@ export default {
     getList(page = 1) {
       //第一次默认是1 第二次是5 就是每页的记录数
       this.page = page;
+      console.log(this.page+"page1");
       teacher
         .getTeacherListPage(this.page, this.limit, this.teacherQuery)
         .then((response) => {
-          console.log(response);
-
           this.list = response.data.rows;
           this.total = response.data.total;
-          console.log(this.list);
-          console.log(this.total);
+
         })
         .catch((error) => {
           console.log(error);
